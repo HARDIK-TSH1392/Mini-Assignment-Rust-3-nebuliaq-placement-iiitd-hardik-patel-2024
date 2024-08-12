@@ -27,11 +27,10 @@ This Rust script processes a list of URLs and replaces segments that are identif
    cd <repository_name>
    ```
 
-   Or if you're starting fresh:
+   followed by:
 
    ```sh
-   cargo new url-id-replacement
-   cd url-id-replacement
+   cd fuzzy_replace
    ```
 
 2. **Replace the `main.rs` Content:**
@@ -43,6 +42,7 @@ This Rust script processes a list of URLs and replaces segments that are identif
    Use Cargo to build and run the project:
 
    ```sh
+   cargo build
    cargo run
    ```
 
