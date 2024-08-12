@@ -1,0 +1,43 @@
+
+# Ignore target directory
+/target/
+
+# Ignore Cargo.lock if you're not committing dependencies
+Cargo.lock
+
+# Ignore IDE specific files
+*.rs.bk
+*.log
+*.tmp
+*.swp
+*.bak
+*.swo
+*.old
+*.orig
+
+# Ignore DS_Store and other system files
+.DS_Store
+Thumbs.db
+
+# Ignore the output of the Cargo build process
+/debug/
+release/
+
+# Ignore files related to Rust compilation
+*.rlib
+*.rmeta
+*.rsc
+*.d
+*.so
+*.dylib
+*.dll
+*.exe
+*.a
+*.o
+*.h
+
+# Ignore any other files specific to your environment
+/.vscode/
+/.idea/
+/__pycache__/
+/target/
