@@ -13,16 +13,16 @@ fn replace_ids(url: &str) -> String {
     // Regular expression to match alphanumeric IDs starting with a capital letter or digit, allowing hyphens, at least 6 characters long
     let alphanumeric_regex = Regex::new(r"\b([A-Z0-9]{1}[a-zA-Z0-9-]{5,})\b").unwrap();
 
-    // Step 1: Replace IDs inside square brackets with __ID__ (removing the brackets)
+    // Step 1: Replacing IDs inside square brackets with __ID__ (removing the brackets)
     let processed_url = bracketed_id_regex.replace_all(url, "__ID__").to_string();
 
-    // Step 2: Replace full segments with a prefix and UUID with __ID__
+    // Step 2: Replacing full segments with a prefix and UUID with __ID__
     let processed_url = full_segment_regex.replace_all(&processed_url, "__ID__").to_string();
 
-    // Step 3: Replace standalone UUIDs
+    // Step 3: Replacing standalone UUIDs
     let processed_url = uuid_regex.replace_all(&processed_url, "__ID__").to_string();
 
-    // Step 4: Replace alphanumeric IDs that start with a capital letter or digit and are at least 6 characters long
+    // Step 4: Replacing alphanumeric IDs that start with a capital letter or digit and are at least 6 characters long
     let processed_url = alphanumeric_regex.replace_all(&processed_url, |caps: &regex::Captures| {
         let matched = &caps[0];
         if matched.contains('-') || matched.len() >= 6 {
