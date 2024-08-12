@@ -4,6 +4,8 @@
 
 This Rust script processes a list of URLs and replaces segments that are identified as IDs (such as UUIDs, alphanumeric IDs, or specific patterns) with `__ID__` or `__IDs__` when there are multiple IDs in a segment. The script handles various ID patterns and considers specific segments as complete IDs, even when they include prefixes or are enclosed in square brackets.
 
+Video Link of the Demo: https://drive.google.com/file/d/1NDhDCBOXinva5S7q2doCivQ90DsFSZtn/view?usp=sharing
+
 ## Features
 
 - **UUID Replacement:** Replaces universally unique identifiers (UUIDs) in URLs.
